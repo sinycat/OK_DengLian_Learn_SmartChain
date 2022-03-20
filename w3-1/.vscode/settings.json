@@ -1,0 +1,5 @@
+{
+    "solidity.compileUsingRemoteVersion": "v0.8.10+commit.fc410830",
+    "solidity.compileUsingLocalVersion": "d:\\code\\hardhat\\Erc20Test\\soljson-v0.8.10+commit.fc410830.js",
+    "solidity.defaultCompiler": "remote"
+}
