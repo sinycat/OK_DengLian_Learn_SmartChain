@@ -1,15 +1,7 @@
-# Basic Sample Hardhat Project
+#  作业提交说明
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
+1. 本作业中的contract已经部署到Rinkeby测试网 contract地址为: [0xA9476D63039DbA11753B50351a0bf7c2AC677C97](https://rinkeby.etherscan.io/address/0xA9476D63039DbA11753B50351a0bf7c2AC677C97)
+2. 本作业包含hardhat contract项目和vue UI项目,都在一起. 可直接下载运行.
+3. 项目界面演示
 
-Try running some of the following tasks:
 
-```shell
-npx hardhat accounts
-npx hardhat compile
-npx hardhat clean
-npx hardhat test
-npx hardhat node
-node scripts/sample-script.js
-npx hardhat help
-```
