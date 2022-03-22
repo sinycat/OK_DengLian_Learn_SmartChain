@@ -56,15 +56,15 @@ module.exports = {
 		rinkeby: {
 			url: "https://rinkeby.infura.io/v3/028ccf426c9a4bdfa31111f18a6ca9f0",
 			accounts: [
-				"0x0e74f90d413fc685f49ebb31d432303161d66ef30b27dbe538047bdc34e4f95e",
-				"0x1625083670bc156feb3b577770988631188d7ccf696d4a051b9a810e77d96710",
+				"xxx",
+				"xxx",
 			],
 		},
 		bsc: {
 			url: "https://data-seed-prebsc-1-s1.binance.org:8545/",
 			accounts: [
-				"0x0e74f90d413fc685f49ebb31d432303161d66ef30b27dbe538047bdc34e4f95e",
-				"0x1625083670bc156feb3b577770988631188d7ccf696d4a051b9a810e77d96710",
+				"xxx",
+				"xxx",
 			],
 		},
 	},
