@@ -26,6 +26,14 @@ require("@nomiclabs/hardhat-waffle");
 //verify use
 require("@nomiclabs/hardhat-etherscan");
 
+//read pin
+const fs = require('fs');
+let str= fs.readFileSync("./pin/pin.json").toString().trim();
+let pin = JSON.parse(str).account_pin;
+let api_rinkeby=JSON.parse(str).api_rinkeby;
+let api_bscTest=JSON.parse(str).api_bscTestnet;
+let api_bscMain=JSON.parse(str).api_bscMainKey;
+
 //自定义的任务
 // require("./task/task_counter");
 
@@ -44,7 +52,8 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
 module.exports = {
 	defaultNetwork: "rinkeby",
 	// defaultNetwork: "dev",
-	// defaultNetwork: "bsc",
+	// defaultNetwork: "bsc_test",
+	// defaultNetwork: "bsc_main",
 	networks: {
 		hardhat: {},
 		localhost: {
@@ -56,15 +65,19 @@ module.exports = {
 		rinkeby: {
 			url: "https://rinkeby.infura.io/v3/028ccf426c9a4bdfa31111f18a6ca9f0",
 			accounts: [
-				"xxx",
-				"xxx",
+				pin
 			],
 		},
-		bsc: {
+		bsc_test: {
 			url: "https://data-seed-prebsc-1-s1.binance.org:8545/",
 			accounts: [
-				"xxx",
-				"xxx",
+				pin
+			],
+		},
+		bsc_main: {
+			url: "https://bsc-dataseed.binance.org/",
+			accounts: [
+				pin
 			],
 		},
 	},
@@ -100,9 +113,11 @@ module.exports = {
 	},
 	etherscan: {
 		apiKey: {
-			rinkeby: "GK61ZAVTZB4Z5UXXBCZYNC6TJGRDV935NH",
-			bscTestnet: "6T6AP8RNWVNI8SM6MXIE6XY1QMH7MC9K34",
+			rinkeby: api_rinkeby,
+			bsc:api_bscMain,
+			bscTestnet: api_bscTest
 		},
 	},
+	
 };
 
